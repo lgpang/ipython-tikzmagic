@@ -278,7 +278,7 @@ class TikzMagics(Magics):
         latex_package = args.package.split(',')
         imagemagick_path = args.imagemagick
         picture_options = args.pictureoptions
-        tikz_options = args.tikzoptions
+        tikz_options = args.tikzoptions.strip('"')
  
         # arguments 'code' in line are prepended to the cell lines
         if cell is None:
